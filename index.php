@@ -3,9 +3,13 @@
 require 'fpdf/mc_indent.php';
 
 $pdf = new PDF('P', 'mm', 'A4');
+$pdf -> AddFont('Poppins','','Poppins-Regular.php');
+$pdf -> AddFont('Poppins','B','Poppins-Bold.php');
 $pdf -> AddPage();
+
 $pdf -> SetLeftMargin(4);
 $pdf -> Image('itcenter.png', 10,7,35,0,'PNG');
+
 $pdf -> SetFont('Arial','B',12);
 $pdf -> Cell(0,5,'Asset ID: 1579   ', 0,1,'R');
 $pdf -> SetFont('Arial','B',18);
